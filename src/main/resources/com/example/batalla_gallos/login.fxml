@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="205.0" prefWidth="363.0" xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.batalla_gallos.LoginController">
+    <children>
+        <Label layoutX="48.0" layoutY="40.0" text="User Name"/>
+        <Label layoutX="57.0" layoutY="91.0" text="Password"/>
+        <TextField fx:id="user" layoutX="127.0" layoutY="36.0"/>
+        <PasswordField fx:id="password" layoutX="127.0" layoutY="87.0"/>
+        <Button fx:id="bt_login" onAction="#login" layoutX="128.0" layoutY="139.0"
+                mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Sign In"/>
+    </children>
+</AnchorPane>
