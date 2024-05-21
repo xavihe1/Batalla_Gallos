@@ -1,6 +1,6 @@
 package com.example.batalla_gallos
 
-import com.example.batalla_gallos.model.Players
+import com.example.batalla_gallos.model.GamePlayers
 import javafx.fxml.FXML
 import javafx.scene.control.ComboBox
 import javafx.scene.control.Label
@@ -27,10 +27,16 @@ class GameController {
     @FXML
     private lateinit var lb_combatResult: Label
 
-    private val players = ArrayList<Players>()
+    private val players = ArrayList<GamePlayers>()
     private var selectedPlayer1 = ""
     private var selectedPlayer2 = ""
 
 
+    private fun fillPlayer1Combo() {
 
+    }
+
+    private fun fillPlayer2Combo() {
+
+    }
 }

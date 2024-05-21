@@ -1,6 +1,6 @@
 package com.example.batalla_gallos.model
 
-abstract class Players (
+abstract class GamePlayers (
     val nom: String,
     val ranking: Int,
     val avatar: String
