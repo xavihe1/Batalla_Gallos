@@ -1,4 +1,4 @@
-package com.example.batalla_gallos
+package com.example.batalla_gallos.controllers
 
 import com.example.batalla_gallos.model.GamePlayers
 import javafx.fxml.FXML

@@ -1,4 +1,4 @@
-package com.example.batalla_gallos
+package com.example.batalla_gallos.controllers
 
 import javafx.fxml.FXML
 import javafx.scene.control.Label
