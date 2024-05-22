@@ -3,24 +3,29 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-
+<?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.batalla_gallos.GameController">
    <children>
       <Pane prefHeight="400.0" prefWidth="600.0">
          <children>
-            <ComboBox layoutX="77.0" layoutY="259.0" opacity="0.8" prefWidth="150.0" promptText="Player 1" />
-            <ComboBox layoutX="372.0" layoutY="259.0" opacity="0.8" prefWidth="150.0" promptText="Player 2" />
-            <Pane layoutX="77.0" layoutY="68.0" prefHeight="150.0" prefWidth="150.0">
+            <ComboBox layoutX="77.0" layoutY="299.0" opacity="0.8" prefWidth="150.0" promptText="Player 1" />
+            <ComboBox layoutX="372.0" layoutY="299.0" opacity="0.8" prefWidth="150.0" promptText="Player 2" />
+            <Pane layoutX="77.0" layoutY="125.0" prefHeight="150.0" prefWidth="150.0">
                <children>
                   <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </Pane>
-            <Pane layoutX="366.0" layoutY="68.0" prefHeight="150.0" prefWidth="162.0">
+            <Pane layoutX="366.0" layoutY="125.0" prefHeight="150.0" prefWidth="162.0">
                <children>
                   <ImageView fitHeight="150.0" fitWidth="162.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </Pane>
+            <Label layoutX="152.0" layoutY="14.0" prefHeight="61.0" prefWidth="316.0" text="ARENA DE COMBAT">
+               <font>
+                  <Font name="Dyuthi Regular" size="36.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>
