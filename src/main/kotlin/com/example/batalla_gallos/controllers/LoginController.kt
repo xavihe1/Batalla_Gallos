@@ -3,7 +3,9 @@ package com.example.batalla_gallos.controllers
 import com.sun.tools.javac.Main
 import javafx.fxml.FXML
 import javafx.fxml.FXMLLoader
+import javafx.scene.Parent
 import javafx.scene.Scene
+import javafx.scene.control.Button
 import javafx.scene.control.PasswordField
 import javafx.scene.control.TextField
 import javafx.stage.Stage
@@ -17,10 +19,21 @@ class LoginController {
     @FXML
     private lateinit var password: PasswordField
 
-    fun login(actionEvent: ActionEvent) {
-        val stage = user.scene.window as Stage
-        val fxmlLoader = FXMLLoader(Main::class.java.getResource("game.fxml"))
-        val scene = Scene(fxmlLoader.load())
-        stage.scene = scene
+
+    @FXML
+    private lateinit var loginButton: Button
+
+    @FXML
+    private fun inizialize() {
+        loginButton.setOnAction {
+
+        }
+    }
+
+    private fun navigateToGame() {
+        val loader = FXMLLoader(javaClass.getResource("game.fxml"))
+        val root = loader.load<Parent>()
+        val stage = loginButton.scene.window as Stage
+        stage.scene.root = root
     }
 }
