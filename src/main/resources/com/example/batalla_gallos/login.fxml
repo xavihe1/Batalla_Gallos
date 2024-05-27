@@ -9,29 +9,28 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="324.0" prefWidth="531.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.batalla_gallos.controllers.LoginController">
    <children>
       <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #B3D7FF;">
          <children>
-            <Label layoutX="47.0" layoutY="27.0" prefHeight="49.0" prefWidth="313.0" text="Login">
+            <Label layoutX="261.0" layoutY="39.0" prefHeight="49.0" prefWidth="105.0" text="Login" textAlignment="CENTER">
                <font>
                   <Font name="System Bold Italic" size="22.0" />
                </font>
             </Label>
-            <PasswordField layoutX="96.0" layoutY="182.0" prefHeight="36.0" prefWidth="195.0" promptText="Password" />
-            <TextField layoutX="95.0" layoutY="107.0" prefHeight="36.0" prefWidth="195.0" promptText="User Name" />
-            <Button layoutX="118.0" layoutY="276.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: #60ABFF; -fx-border-radius: 10; -fx-background-radius: 10;" text="Sign In">
+            <PasswordField layoutX="203.0" layoutY="230.0" prefHeight="36.0" prefWidth="195.0" promptText="Password" />
+            <TextField layoutX="203.0" layoutY="164.0" prefHeight="36.0" prefWidth="195.0" promptText="User Name" />
+            <Button layoutX="225.0" layoutY="320.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: #60ABFF; -fx-border-radius: 10; -fx-background-radius: 10;" text="Sign In">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="47.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="142.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../kotlin/com/example/batalla_gallos/images/password.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="47.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="142.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../kotlin/com/example/batalla_gallos/images/usuario.png" />
                </image>
