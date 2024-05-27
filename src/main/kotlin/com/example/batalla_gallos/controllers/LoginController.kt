@@ -23,17 +23,5 @@ class LoginController {
     @FXML
     private lateinit var loginButton: Button
 
-    @FXML
-    private fun inizialize() {
-        loginButton.setOnAction {
 
-        }
-    }
-
-    private fun navigateToGame() {
-        val loader = FXMLLoader(javaClass.getResource("game.fxml"))
-        val root = loader.load<Parent>()
-        val stage = loginButton.scene.window as Stage
-        stage.scene.root = root
-    }
 }

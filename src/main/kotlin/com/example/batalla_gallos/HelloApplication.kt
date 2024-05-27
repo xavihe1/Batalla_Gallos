@@ -1,5 +1,6 @@
 package com.example.batalla_gallos
 
+import com.example.batalla_gallos.controllers.SceneController
 import javafx.application.Application
 import javafx.fxml.FXMLLoader
 import javafx.scene.Scene
@@ -18,3 +19,5 @@ class HelloApplication : Application() {
 fun main() {
     Application.launch(HelloApplication::class.java)
 }
+
+val sceneController= SceneController()
