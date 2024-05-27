@@ -16,7 +16,7 @@ class GameController {
     private lateinit var img_player2: ImageView
 
     @FXML
-    private lateinit var bt_start: Button
+    private lateinit var startButon: Button
 
     @FXML
     private lateinit var cb_player1: ComboBox<String>

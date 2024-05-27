@@ -5,8 +5,16 @@ import javafx.fxml.FXMLLoader
 import javafx.scene.Parent
 import javafx.stage.Stage
 import javafx.scene.control.Button
+import javafx.scene.control.PasswordField
+import javafx.scene.control.TextField
 
 class RegisterController {
+    @FXML
+    private lateinit var user: TextField
+
+    @FXML
+    private lateinit var password: PasswordField
+
     @FXML
     private lateinit var registerButton: Button
 
