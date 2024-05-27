@@ -7,8 +7,8 @@ import javafx.stage.Stage
 
 class HelloApplication : Application() {
     override fun start(stage: Stage) {
-        val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("menu.fxml"))
-        val scene = Scene(fxmlLoader.load(), 320.0, 240.0)
+        val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("menuView.fxml"))
+        val scene = Scene(fxmlLoader.load(), 600.0, 400.0)
         stage.title = "Epicas batallas de rap!"
         stage.scene = scene
         stage.show()
