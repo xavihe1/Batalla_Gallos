@@ -27,6 +27,12 @@ class GameController {
     @FXML
     private lateinit var lb_combatResult: Label
 
+    @FXML
+    private lateinit var exitButton: Button
+
+    @FXML
+    private lateinit var counter: Label
+
     private val players = ArrayList<GamePlayers>()
     private var selectedPlayer1 = ""
     private var selectedPlayer2 = ""
