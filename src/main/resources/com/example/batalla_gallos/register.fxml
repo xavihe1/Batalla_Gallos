@@ -33,19 +33,19 @@
       <Label layoutX="27.0" layoutY="188.0" prefHeight="31.0" prefWidth="100.0" text="Foto de Perfil:" />
       <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="39.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../kotlin/com/example/batalla_gallos/images/usuario.png" />
+            <Image url="@imgs/usuario.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="39.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../kotlin/com/example/batalla_gallos/images/password.png" />
+            <Image url="@imgs/password.png" />
          </image>
       </ImageView>
       <Pane layoutX="325.0" prefHeight="320.0" prefWidth="203.0">
          <children>
             <ImageView fitHeight="320.0" fitWidth="209.0" layoutX="-3.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../kotlin/com/example/batalla_gallos/images/spray.png" />
+                  <Image url="@imgs/spray.png" />
                </image>
             </ImageView>
          </children>

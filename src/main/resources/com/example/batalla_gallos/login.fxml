@@ -27,12 +27,12 @@
             </Button>
             <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="142.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../kotlin/com/example/batalla_gallos/images/password.png" />
+                  <Image url="@imgs/password.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="142.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../kotlin/com/example/batalla_gallos/images/usuario.png" />
+                  <Image url="@imgs/usuario.png" />
                </image>
             </ImageView>
          </children>
