@@ -4,15 +4,15 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.batalla_gallos.controllers.MenuController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.batalla_gallos.MenuController">
    <children>
       <ImageView fitHeight="244.0" fitWidth="251.0" layoutX="58.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@logo.png" />
          </image>
       </ImageView>
-      <Button layoutX="419.0" layoutY="105.0" mnemonicParsing="false" onAction="#goToGame" text="Play" />
-      <Button layoutX="394.0" layoutY="147.0" mnemonicParsing="false" onAction="#goToLogin" text="Login Player1" />
+      <Button fx:id="irJuego" layoutX="419.0" layoutY="105.0" mnemonicParsing="false" text="Play" onAction="#handleCreatePlayer"/>
+      <Button fx:id="irlogin" layoutX="394.0" layoutY="147.0" mnemonicParsing="false" text="Login Player1" onAction="#loginGo"/>
       <Button layoutX="394.0" layoutY="186.0" mnemonicParsing="false" text="Login Player2" />
       <ImageView fitHeight="44.0" fitWidth="64.0" layoutX="543.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
          <image>

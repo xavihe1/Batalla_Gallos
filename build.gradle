@@ -37,9 +37,58 @@ javafx {
 }
 
 dependencies {
+    // MongoDB
+    implementation "org.mongodb:mongodb-driver-sync:4.9.0"
 
-    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+    // Log4j binding for SLF4J
+    implementation "org.apache.logging.log4j:log4j-slf4j-impl:2.17.1"
+
+    // Gson
+    implementation 'com.google.code.gson:gson:2.8.8'
+
+    // Kotlin Serialization
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0"
+
+    // Kotlin Coroutines for JavaFX
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-javafx:1.6.0'
+
+    // ControlsFX
+    implementation 'org.controlsfx:controlsfx:11.1.2'
+
+    // FormsFX
+    implementation('com.dlsc.formsfx:formsfx-core:11.6.0') {
+        exclude group: 'org.openjfx'
+    }
+
+    // ValidatorFX
+    implementation('net.synedra:validatorfx:0.4.0') {
+        exclude group: 'org.openjfx'
+    }
+
+    // Ikonli
+    implementation 'org.kordamp.ikonli:ikonli-javafx:12.3.1'
+
+    // BootstrapFX
+    implementation 'org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0'
+
+    // TilesFX
+    implementation('eu.hansolo:tilesfx:11.48') {
+        exclude group: 'org.openjfx'
+    }
+
+    // FXGL
+    implementation('com.github.almasb:fxgl:17.3') {
+        exclude group: 'org.openjfx'
+        exclude group: 'org.jetbrains.kotlin'
+    }
+
+    // Ktor Client
+    implementation "io.ktor:ktor-client-core:2.3.11"
+    implementation "io.ktor:ktor-client-cio:2.3.11"
+
+    // JUnit for testing
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
 }
 
 test {
