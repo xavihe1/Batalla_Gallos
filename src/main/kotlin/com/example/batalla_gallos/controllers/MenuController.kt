@@ -18,7 +18,7 @@ class MenuController {
     lateinit var irlogin: Button
 
     @FXML
-    fun handleCreatePlayer() {
+    fun irJuego() {
         val stage = irJuego.scene.window as Stage
         val url: URL? = javaClass.getResource("game.fxml")
         val root: Parent = FXMLLoader.load(url)
