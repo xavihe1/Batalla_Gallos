@@ -21,7 +21,7 @@
          <font>
             <Font name="Khmer OS System" size="13.0" />
          </font></PasswordField>
-        <Button fx:id="bt_login" layoutX="127.0" layoutY="243.0" mnemonicParsing="false" onAction="#login" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: #60ABFF; -fx-border-radius: 10; -fx-background-radius: 10;" text="Sign In">
+        <Button fx:id="bt_login" layoutX="127.0" layoutY="243.0" mnemonicParsing="false" onAction="#login" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: #60ABFF; -fx-border-radius: 10; -fx-background-radius: 10;" text="Sign Up">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Button>
