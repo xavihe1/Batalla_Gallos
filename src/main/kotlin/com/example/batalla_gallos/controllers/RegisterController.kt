@@ -1,14 +1,16 @@
-package com.example.batalla_gallos.controllers
+package com.example.batalla_gallos
 
 import javafx.fxml.FXML
 import javafx.fxml.FXMLLoader
 import javafx.scene.Parent
+import javafx.scene.Scene
 import javafx.scene.control.Alert
 import javafx.scene.control.Alert.AlertType
 import javafx.stage.Stage
 import javafx.scene.control.Button
 import javafx.scene.control.PasswordField
 import javafx.scene.control.TextField
+import java.net.URL
 
 class RegisterController {
     @FXML
@@ -59,11 +61,14 @@ class RegisterController {
         navigateToMenu()
     }
 
-    private fun navigateToMenu() {
-        val loader = FXMLLoader(javaClass.getResource("login.fxml"))
-        val root = loader.load<Parent>()
+    @FXML
+    fun navigateToMenu() {
         val stage = exitButton.scene.window as Stage
-        stage.scene.root = root
+        val url: URL? = javaClass.getResource("menuView.fxml")
+        val root: Parent = FXMLLoader.load(url)
+        val scene = Scene(root)
+        stage.scene = scene
+        stage.show()
     }
 
     private fun showAlert(alertType: AlertType, title: String, content: String) {
@@ -73,4 +78,6 @@ class RegisterController {
         alert.contentText = content
         alert.showAndWait()
     }
+
+
 }
