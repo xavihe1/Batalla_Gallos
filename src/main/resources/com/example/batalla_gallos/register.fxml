@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
@@ -21,7 +20,7 @@
          <font>
             <Font name="Khmer OS System" size="13.0" />
          </font></PasswordField>
-        <Button fx:id="registerButton" layoutX="127.0" layoutY="243.0" mnemonicParsing="false" onAction="#login" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: #60ABFF; -fx-border-radius: 10; -fx-background-radius: 10;" text="Sign Up">
+        <Button fx:id="registerButton" layoutX="128.0" layoutY="251.0" mnemonicParsing="false" onAction="#login" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: #60ABFF; -fx-border-radius: 10; -fx-background-radius: 10;" text="Sign Up">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Button>
@@ -30,7 +29,6 @@
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Label>
-      <Label layoutX="27.0" layoutY="188.0" prefHeight="31.0" prefWidth="100.0" text="Foto de Perfil:" />
       <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="39.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@imgs/usuario.png" />
@@ -48,8 +46,22 @@
                   <Image url="@imgs/spray.png" />
                </image>
             </ImageView>
+            <Button fx:id="exitButton" layoutX="127.0" layoutY="282.0" mnemonicParsing="false" style="-fx-background-color: #60ABFF; -fx-border-radius: 10; -fx-background-radius: 10;" text="Exit">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
-      <ComboBox layoutX="143.0" layoutY="191.0" prefWidth="150.0" promptText="Seleccionar" />
+      <TextField fx:id="imageLink" layoutX="98.0" layoutY="186.0" prefHeight="36.0" prefWidth="195.0" promptText="Insert Image Link">
+         <font>
+            <Font name="Khmer OS System" size="13.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="39.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/gallery.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>

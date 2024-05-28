@@ -18,13 +18,22 @@ class RegisterController {
     private lateinit var password: PasswordField
 
     @FXML
+    private lateinit var imageLink: TextField
+
+    @FXML
     private lateinit var registerButton: Button
 
-    private val usersGuardados = mutableMapOf<String, String>()
+    @FXML
+    private lateinit var exitButton: Button
+
+    private val usersGuardados = mutableMapOf<String, Pair<String, String>>()
 
     @FXML
     private fun initialize() {
         registerButton.setOnAction {
+            login()
+        }
+        exitButton.setOnAction {
             navigateToMenu()
         }
     }
@@ -33,9 +42,10 @@ class RegisterController {
     private fun login() {
         val username = user.text
         val pwd = password.text
+        var imgLink = imageLink.text
 
-        if (username.isNullOrEmpty() || pwd.isNullOrEmpty()) {
-            showAlert(AlertType.ERROR, "Error", "El usuario y la contraseña no pueden estar vacíos.")
+        if (username.isNullOrEmpty() || pwd.isNullOrEmpty() || imgLink.isNullOrEmpty()) {
+            showAlert(AlertType.ERROR, "Error", "El usuario, la contraseña y el enlace de la imagen no pueden estar vacíos.")
             return
         }
 
@@ -44,7 +54,7 @@ class RegisterController {
             return
         }
 
-        usersGuardados[username] = pwd
+        usersGuardados[username] = Pair(pwd, imgLink)
         showAlert(AlertType.INFORMATION, "Registro Exitoso", "Usuario registrado correctamente.")
         navigateToMenu()
     }
@@ -52,7 +62,7 @@ class RegisterController {
     private fun navigateToMenu() {
         val loader = FXMLLoader(javaClass.getResource("login.fxml"))
         val root = loader.load<Parent>()
-        val stage = registerButton.scene.window as Stage
+        val stage = exitButton.scene.window as Stage
         stage.scene.root = root
     }
 
