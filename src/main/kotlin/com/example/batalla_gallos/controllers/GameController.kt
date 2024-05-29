@@ -1,4 +1,4 @@
-package com.example.batalla_gallos.controllers
+package com.example.batalla_gallos
 
 import com.example.batalla_gallos.model.GamePlayers
 import javafx.animation.KeyFrame

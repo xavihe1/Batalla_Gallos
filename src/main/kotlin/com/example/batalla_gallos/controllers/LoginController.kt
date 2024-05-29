@@ -1,4 +1,4 @@
-package com.example.batalla_gallos.controllers
+package com.example.batalla_gallos
 
 import com.sun.tools.javac.Main
 import javafx.fxml.FXML
