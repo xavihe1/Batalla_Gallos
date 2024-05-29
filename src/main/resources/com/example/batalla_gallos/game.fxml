@@ -18,19 +18,29 @@
       </ImageView>
       <Pane prefHeight="402.0" prefWidth="689.0">
          <children>
-            <ComboBox fx:id="cb_player1" layoutX="45.0" layoutY="51.0" opacity="0.8" prefWidth="150.0" promptText="Player 1" />
-            <ComboBox fx:id="cb_player2" layoutX="482.0" layoutY="51.0" opacity="0.8" prefWidth="150.0" promptText="Player 2" />
-            <Label fx:id="counter" layoutX="287.0" layoutY="31.0" prefHeight="43.0" prefWidth="103.0" style="-fx-background-color: white; -fx-background-radius: 50%; -fx-padding: 20px; -fx-alignment: center; -fx-font-size: 20px;" text="0">
+            <ComboBox fx:id="cb_player1" layoutX="45.0" layoutY="51.0" opacity="0.9" prefWidth="150.0" promptText="Select Player" />
+            <ComboBox fx:id="cb_player2" layoutX="482.0" layoutY="51.0" opacity="0.9" prefWidth="150.0" promptText="Select Player" />
+            <Label fx:id="counter" layoutX="287.0" layoutY="31.0" opacity="0.98" prefHeight="43.0" prefWidth="103.0" style="-fx-background-color: white; -fx-background-radius: 50%; -fx-padding: 20px; -fx-alignment: center; -fx-font-size: 20px;" text="0">
                <font>
                   <Font name="Vemana2000" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="45.0" layoutY="300.0" prefHeight="65.0" prefWidth="174.0" style="-fx-background-color: white;" />
+            <Label layoutX="45.0" layoutY="300.0" prefHeight="65.0" prefWidth="174.0" style="-fx-background-color: white; -fx-background-radius: 6%;" />
             <Button fx:id="exitButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#navigateToMenu" text="Exit" />
-            <Button fx:id="startButon" layoutX="306.0" layoutY="325.0" mnemonicParsing="false" onAction="#startCountdown" prefHeight="39.0" prefWidth="77.0" text="Start" />
-            <Label layoutX="458.0" layoutY="300.0" prefHeight="65.0" prefWidth="174.0" style="-fx-background-color: white;" />
-            <Label layoutX="45.0" layoutY="88.0" prefHeight="16.0" prefWidth="77.0" style="-fx-background-color: white;" text="Points: " />
-            <Label layoutX="482.0" layoutY="88.0" prefHeight="16.0" prefWidth="77.0" style="-fx-background-color: white;" text="Points: " />
+            <Button fx:id="startButon" layoutX="306.0" layoutY="325.0" mnemonicParsing="false" onAction="#startCountdown" prefHeight="39.0" prefWidth="77.0" style="-fx-background-color: black;" text="Start" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font></Button>
+            <Label layoutX="458.0" layoutY="300.0" prefHeight="65.0" prefWidth="174.0" style="-fx-background-color: white; -fx-background-radius: 6%;" />
+            <Label layoutX="482.0" layoutY="88.0" prefHeight="16.0" prefWidth="77.0" style="-fx-background-color: white; -fx-background-radius: 50%;" text="   Points: ">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font></Label>
+            <Label layoutX="45.0" layoutY="88.0" prefHeight="16.0" prefWidth="77.0" style="-fx-background-color: white; -fx-background-radius: 50%;" text="   Points: ">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>
