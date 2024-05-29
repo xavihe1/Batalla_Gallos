@@ -26,6 +26,9 @@ class MenuController {
     lateinit var subirPalabras: Button
 
     @FXML
+    lateinit var rankingButton: Button
+
+    @FXML
     fun irJuego() {
         val stage = irJuego.scene.window as Stage
         val url: URL? = javaClass.getResource("game.fxml")
@@ -51,6 +54,16 @@ class MenuController {
     fun irRegister() {
         val stage = irRegister.scene.window as Stage
         val url: URL? = javaClass.getResource("register.fxml")
+        val root: Parent = FXMLLoader.load(url)
+        val scene = Scene(root)
+        stage.scene = scene
+        stage.show()
+    }
+
+    @FXML
+    fun irRanking() {
+        val stage = rankingButton.scene.window as Stage
+        val url: URL? = javaClass.getResource("ranking.fxml")
         val root: Parent = FXMLLoader.load(url)
         val scene = Scene(root)
         stage.scene = scene
