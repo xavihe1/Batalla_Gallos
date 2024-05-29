@@ -10,6 +10,10 @@ import javafx.stage.Stage
 import javafx.scene.control.Button
 import javafx.scene.control.PasswordField
 import javafx.scene.control.TextField
+import kotlinx.coroutines.DelicateCoroutinesApi
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import java.net.URL
 
 class RegisterController {
@@ -23,42 +27,29 @@ class RegisterController {
     private lateinit var imageLink: TextField
 
     @FXML
-    private lateinit var registerButton: Button
+    private lateinit var register: Button
 
     @FXML
     private lateinit var exitButton: Button
 
-    private val usersGuardados = mutableMapOf<String, Pair<String, String>>()
 
+
+    @OptIn(DelicateCoroutinesApi::class)
     @FXML
-    private fun initialize() {
-        registerButton.setOnAction {
-            login()
-        }
-        exitButton.setOnAction {
-            navigateToMenu()
+    fun register() {
+        GlobalScope.launch(Dispatchers.IO) {
+            subirCliente()
         }
     }
-
     @FXML
-    private fun login() {
+    private suspend fun subirCliente() {
         val username = user.text
         val pwd = password.text
-        var imgLink = imageLink.text
+        val imgLink = imageLink.text
+        val usuario="$username $pwd $imgLink 0"
+        println(usuario)
 
-        if (username.isNullOrEmpty() || pwd.isNullOrEmpty() || imgLink.isNullOrEmpty()) {
-            showAlert(AlertType.ERROR, "Error", "El usuario, la contraseña y el enlace de la imagen no pueden estar vacíos.")
-            return
-        }
-
-        if (usersGuardados.containsKey(username)) {
-            showAlert(AlertType.ERROR, "Error", "El usuario ya está registrado.")
-            return
-        }
-
-        usersGuardados[username] = Pair(pwd, imgLink)
-        showAlert(AlertType.INFORMATION, "Registro Exitoso", "Usuario registrado correctamente.")
-        navigateToMenu()
+        subirClienteBD(usuario)
     }
 
     @FXML

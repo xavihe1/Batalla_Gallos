@@ -23,5 +23,9 @@ class LoginController {
     @FXML
     private lateinit var loginButton: Button
 
+    @FXML
+    fun comprobarLogin() {
+
+    }
 
 }
