@@ -35,7 +35,7 @@
                   <Image url="@imgs/usuario.png" />
                </image>
             </ImageView>
-            <Button layoutX="524.0" layoutY="356.0" mnemonicParsing="false" text="Exit" />
+            <Button fx:id="exitButton" layoutX="524.0" layoutY="356.0" mnemonicParsing="false" onAction="#irMenu" text="Exit" />
          </children>
       </AnchorPane>
    </children>

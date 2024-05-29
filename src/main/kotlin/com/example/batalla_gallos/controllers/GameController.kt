@@ -83,5 +83,4 @@ class GameController {
         stage.scene = scene
         stage.show()
     }
-
 }
