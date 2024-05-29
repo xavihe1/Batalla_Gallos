@@ -13,6 +13,7 @@ import javafx.scene.image.ImageView
 import javafx.scene.control.Button
 import javafx.stage.Stage
 import javafx.util.Duration
+import java.awt.Image
 import java.net.URL
 
 class GameController {
@@ -30,10 +31,10 @@ class GameController {
     private lateinit var counter: Label
 
     @FXML
-    private lateinit var cb_player1: ComboBox<String>
+    private lateinit var nom_player1: Label
 
     @FXML
-    private lateinit var cb_player2: ComboBox<String>
+    private lateinit var nom_player2: Label
 
     @FXML
     private lateinit var exitButton: Button
@@ -82,6 +83,12 @@ class GameController {
         val scene = Scene(root)
         stage.scene = scene
         stage.show()
+    }
+
+    fun imagesOfThePlayers(){
+        val url:String = ""
+        val image = Image(imageUrl)
+        img_player1.image = image
     }
 
 }

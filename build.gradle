@@ -89,6 +89,10 @@ dependencies {
     // JUnit for testing
     testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+
+    //VIew images FXML
+    implementation("org.openjfx:javafx-controls:17")
+    implementation("org.openjfx:javafx-fxml:17")
 }
 
 test {
