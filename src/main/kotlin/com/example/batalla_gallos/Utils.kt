@@ -1,6 +1,8 @@
 package com.example.batalla_gallos
 
+import com.example.batalla_gallos.model.Cliente
 import io.ktor.client.*
+import io.ktor.client.call.*
 import io.ktor.client.request.*
 import io.ktor.util.*
 import java.io.BufferedReader
@@ -76,6 +78,21 @@ suspend fun subirClienteBD(texto:String){
     client.post("http://127.0.0.1:8080/clients") {
         body = texto
     }
+}
+
+suspend fun obtenerClientesBD():List<Cliente>{
+    val client = HttpClient()
+    var clientesTexto:MutableList<String>
+    val clientes= mutableListOf<Cliente>()
+    val messageResponse = client.get("http://127.0.0.1:8080/clients/all")
+    clientesTexto = messageResponse.body<MutableList<String>>()
+    println(clientesTexto)
+    clientesTexto.forEach {
+        val split=it.split(" ")
+        val cliente=Cliente(split[0],split[1],split[2],split[3].toInt())
+        clientes.add(cliente)
+    }
+    return clientes
 }
 
 

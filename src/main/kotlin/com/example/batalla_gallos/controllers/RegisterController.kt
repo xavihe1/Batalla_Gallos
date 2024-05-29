@@ -1,5 +1,6 @@
 package com.example.batalla_gallos
 
+import com.example.batalla_gallos.model.Cliente
 import javafx.fxml.FXML
 import javafx.fxml.FXMLLoader
 import javafx.scene.Parent
@@ -17,6 +18,8 @@ import kotlinx.coroutines.launch
 import java.net.URL
 
 class RegisterController {
+
+    var clientes= listOf<Cliente>()
     @FXML
     private lateinit var user: TextField
 
@@ -43,13 +46,22 @@ class RegisterController {
     }
     @FXML
     private suspend fun subirCliente() {
+        var sePuede=true
         val username = user.text
         val pwd = password.text
         val imgLink = imageLink.text
         val usuario="$username $pwd $imgLink 0"
         println(usuario)
-
-        subirClienteBD(usuario)
+        clientes=obtenerClientesBD()
+        clientes.forEach {
+            println(it.name)
+            if(it.name==username){
+                sePuede=false
+            }
+        }
+        if (sePuede){
+            subirClienteBD(usuario)
+        }
     }
 
     @FXML
