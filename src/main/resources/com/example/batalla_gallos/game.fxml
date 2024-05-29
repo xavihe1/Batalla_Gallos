@@ -25,10 +25,12 @@
                   <Font name="Vemana2000" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="73.0" layoutY="320.0" prefHeight="24.0" prefWidth="95.0" style="-fx-background-color: white; -fx-background-radius: 50%; -fx-alignment: center;" text="Rank: " />
-            <Label layoutX="510.0" layoutY="320.0" prefHeight="24.0" prefWidth="95.0" style="-fx-background-color: white; -fx-background-radius: 50%; -fx-alignment: center;" text="Rank: " />
-            <Button fx:id="exitButton" layoutX="613.0" layoutY="365.0" mnemonicParsing="false" onAction="#navigateToMenu" text="Exit" />
+            <Label layoutX="45.0" layoutY="300.0" prefHeight="65.0" prefWidth="174.0" style="-fx-background-color: white;" />
+            <Button fx:id="exitButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#navigateToMenu" text="Exit" />
             <Button fx:id="startButon" layoutX="306.0" layoutY="325.0" mnemonicParsing="false" onAction="#startCountdown" prefHeight="39.0" prefWidth="77.0" text="Start" />
+            <Label layoutX="458.0" layoutY="300.0" prefHeight="65.0" prefWidth="174.0" style="-fx-background-color: white;" />
+            <Label layoutX="45.0" layoutY="88.0" prefHeight="16.0" prefWidth="77.0" style="-fx-background-color: white;" text="Points: " />
+            <Label layoutX="482.0" layoutY="88.0" prefHeight="16.0" prefWidth="77.0" style="-fx-background-color: white;" text="Points: " />
          </children>
       </Pane>
    </children>

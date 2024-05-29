@@ -39,6 +39,18 @@ class GameController {
     @FXML
     private lateinit var exitButton: Button
 
+    @FXML
+    private lateinit var palabrasJugador1: Label
+
+    @FXML
+    private lateinit var palabrasJuagdor2: Label
+
+    @FXML
+    private lateinit var puntosJugador1: Label
+
+    @FXML
+    private lateinit var puntosJugador2: Label
+
 
     private val players = ArrayList<GamePlayers>()
     private var selectedPlayer1 = ""
