@@ -51,6 +51,8 @@ class GameController {
     @FXML
     private lateinit var puntosJugador2: Label
 
+    //variable para llamar a la base de datos aqui
+
 
     private val players = ArrayList<GamePlayers>()
     private var selectedPlayer1 = ""
@@ -96,6 +98,20 @@ class GameController {
         stage.scene = scene
         stage.show()
     }
+
+    /*
+    fun loadImage(username: String, imageView: ImageView) {
+        val playerData = database.getPlayerData(username)
+        if (playerData?.imageUrl != null) {
+            val image = Image(playerData.imageUrl)
+            Platform.runLater {
+                imageView.image = image
+            }
+        }
+    }
+     */
+
+
     /*
     fun imagesOfThePlayers(){
         val url:String = ""
