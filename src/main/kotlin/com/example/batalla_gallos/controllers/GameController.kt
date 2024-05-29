@@ -1,4 +1,4 @@
-package com.example.batalla_gallos.controllers
+package com.example.batalla_gallos
 
 import com.example.batalla_gallos.model.GamePlayers
 import javafx.animation.KeyFrame
@@ -84,11 +84,11 @@ class GameController {
         stage.scene = scene
         stage.show()
     }
-
+    /*
     fun imagesOfThePlayers(){
         val url:String = ""
-        val image = Image(imageUrl)
+        val image = Image(url)
         img_player1.image = image
     }
-
+    */
 }
