@@ -31,10 +31,10 @@ class GameController {
     private lateinit var counter: Label
 
     @FXML
-    private lateinit var nom_player1: Label
+    private lateinit var cb_player1: ComboBox<String>
 
     @FXML
-    private lateinit var nom_player2: Label
+    private lateinit var cb_player2: ComboBox<String>
 
     @FXML
     private lateinit var exitButton: Button

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.batalla_gallos.controllers.GameController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.batalla_gallos.GameController">
    <children>
       <ImageView fitHeight="402.0" fitWidth="689.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -27,8 +27,8 @@
             </Label>
             <Label layoutX="73.0" layoutY="320.0" prefHeight="24.0" prefWidth="95.0" style="-fx-background-color: white; -fx-background-radius: 50%; -fx-alignment: center;" text="Rank: " />
             <Label layoutX="510.0" layoutY="320.0" prefHeight="24.0" prefWidth="95.0" style="-fx-background-color: white; -fx-background-radius: 50%; -fx-alignment: center;" text="Rank: " />
-            <Button fx:id="exitButton" layoutX="613.0" layoutY="365.0" onAction="#navigateToMenu" mnemonicParsing="false" text="Exit" />
-            <Button fx:id="startButon" layoutX="306.0" layoutY="325.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="77.0" onAction="#startCountdown" text="Start" />
+            <Button fx:id="exitButton" layoutX="613.0" layoutY="365.0" mnemonicParsing="false" onAction="#navigateToMenu" text="Exit" />
+            <Button fx:id="startButon" layoutX="306.0" layoutY="325.0" mnemonicParsing="false" onAction="#startCountdown" prefHeight="39.0" prefWidth="77.0" text="Start" />
          </children>
       </Pane>
    </children>
