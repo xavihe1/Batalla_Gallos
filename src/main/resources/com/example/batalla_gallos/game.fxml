@@ -55,6 +55,8 @@
              <Label fx:id="palabra23" layoutX="441.0" layoutY="313.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
              <Label fx:id="palabra24" layoutX="441.0" layoutY="337.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
              <Label fx:id="palabra25" layoutX="441.0" layoutY="361.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
+            <Button fx:id="puntuacio1playerButton" layoutX="147.0" layoutY="84.0" mnemonicParsing="false" onAction="#sumarPuntuacion1" text="+" />
+            <Button fx:id="puntuacio2playerButton" layoutX="589.0" layoutY="84.0" mnemonicParsing="false" onAction="#sumarPuntuacion2" text="+" />
          </children>
       </Pane>
    </children>

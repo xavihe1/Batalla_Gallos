@@ -18,9 +18,11 @@ import javafx.util.Duration
 import java.awt.Image
 import java.net.URL
 import javafx.scene.image.*
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import kotlin.random.Random
 
 class GameController {
 
@@ -64,6 +66,7 @@ class GameController {
     @FXML
     private lateinit var cb_player1: ComboBox<String>
 
+
     @FXML
     private lateinit var cb_player2: ComboBox<String>
 
@@ -74,10 +77,16 @@ class GameController {
     private lateinit var puntuacio1player: Label
 
     @FXML
+    private var puntuacio1: Int = 0
+
+    @FXML
     private lateinit var puntuacio1playerButton: Button
 
     @FXML
     private lateinit var puntuacio2player: Label
+
+    @FXML
+    private var puntuacio2: Int = 0
 
     @FXML
     private lateinit var puntuacio2playerButton: Button
@@ -197,5 +206,28 @@ class GameController {
         }
         val image = Image(player.urlPFP)
         img_player2.image = image
+    }
+
+    @OptIn(DelicateCoroutinesApi::class)
+    @FXML
+    fun sumarPuntuacion1(){
+        var puntuacion= Random.nextInt(1, 101)
+        puntuacio1 += puntuacion
+        puntuacio1player.text = "Points: ${puntuacio1+puntuacion}"
+
+        GlobalScope.launch(Dispatchers.IO) {
+            aumentarPuntuacion(cb_player1.value,puntuacion)
+        }
+    }
+    @OptIn(DelicateCoroutinesApi::class)
+    @FXML
+    fun sumarPuntuacion2(){
+        var puntuacion= Random.nextInt(1, 101)
+        puntuacio2 += puntuacion
+        puntuacio2player.text = "Points: ${puntuacio2+puntuacion}"
+
+        GlobalScope.launch(Dispatchers.IO) {
+            aumentarPuntuacion(cb_player2.value,puntuacion)
+        }
     }
 }
