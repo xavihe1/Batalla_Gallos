@@ -99,6 +99,7 @@ suspend fun obtenerPalabrasBD():List<String> {
     var x=mensaje.bodyAsText()
     val json = Json { ignoreUnknownKeys = true }
     palabras = json.decodeFromString<List<String>>(x)
+    println(palabras)
     return palabras
 }
 

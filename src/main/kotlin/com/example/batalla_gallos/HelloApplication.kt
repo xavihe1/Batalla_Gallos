@@ -21,4 +21,6 @@ fun main() {
 }
 
 var usuarios= listOf<Cliente>()
+var palabras1player= listOf<String>()
+var palabras2player= listOf<String>()
 

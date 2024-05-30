@@ -71,16 +71,16 @@ class GameController {
     private lateinit var exitButton: Button
 
     @FXML
-    private lateinit var palabrasJugador1: Label
+    private lateinit var puntuacio1player: Label
 
     @FXML
-    private lateinit var palabrasJuagdor2: Label
+    private lateinit var puntuacio1playerButton: Button
 
     @FXML
-    private lateinit var puntosJugador1: Label
+    private lateinit var puntuacio2player: Label
 
     @FXML
-    private lateinit var puntosJugador2: Label
+    private lateinit var puntuacio2playerButton: Button
 
     @FXML
     private lateinit var configurationImage: ImageView
@@ -91,10 +91,6 @@ class GameController {
 
     //variable para llamar a la base de datos aqui
 
-
-    private val players = ArrayList<GamePlayers>()
-    private var selectedPlayer1 = ""
-    private var selectedPlayer2 = ""
     private var countdown: Timeline? = null
     private var tiempo: Int = 20
 
@@ -102,10 +98,6 @@ class GameController {
     fun initialize() {
         startButon.setOnAction {
             startCountdown()
-            GlobalScope.launch(Dispatchers.IO) {
-                val ply1=obtenerPalabrasBD()
-                val ply2=obtenerPalabrasBD()
-            }
         }
 
         exitButton.setOnAction {
@@ -120,6 +112,18 @@ class GameController {
         cb_player2.items = observableList
 
         tiempo = ConfigurationsController.tiempo
+
+        palabra11.text = palabras1player[0]
+        palabra12.text = palabras1player[1]
+        palabra13.text = palabras1player[2]
+        palabra14.text = palabras1player[3]
+        palabra15.text = palabras1player[4]
+
+        palabra21.text = palabras2player[0]
+        palabra22.text = palabras2player[1]
+        palabra23.text = palabras2player[2]
+        palabra24.text = palabras2player[3]
+        palabra25.text = palabras2player[4]
     }
 
     @FXML

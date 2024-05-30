@@ -38,20 +38,13 @@ class MenuController {
         stage.show()
     }
 
-
-    @FXML
-    fun irLogin() {
-        val stage = irlogin.scene.window as Stage
-        val url: URL? = javaClass.getResource("login.fxml")
-        val root: Parent = FXMLLoader.load(url)
-        val scene = Scene(root)
-        stage.scene = scene
-        stage.show()
-    }
+    @OptIn(DelicateCoroutinesApi::class)
     @FXML
     fun initialize() {
         GlobalScope.launch(Dispatchers.IO) {
             usuarios=obtenerClientesBD()
+            palabras1player=obtenerPalabrasBD()
+            palabras2player=obtenerPalabrasBD()
         }
     }
 
