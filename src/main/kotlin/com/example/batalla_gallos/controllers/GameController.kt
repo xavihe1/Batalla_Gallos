@@ -27,6 +27,31 @@ class GameController {
     @FXML
     private lateinit var img_player1: ImageView
 
+    //LABELS PLY1
+    @FXML
+    private lateinit var palabra11: Label
+    @FXML
+    private lateinit var palabra12: Label
+    @FXML
+    private lateinit var palabra13: Label
+    @FXML
+    private lateinit var palabra14: Label
+    @FXML
+    private lateinit var palabra15: Label
+
+    //LABELS PLY2
+
+    @FXML
+    private lateinit var palabra21: Label
+    @FXML
+    private lateinit var palabra22: Label
+    @FXML
+    private lateinit var palabra23: Label
+    @FXML
+    private lateinit var palabra24: Label
+    @FXML
+    private lateinit var palabra25: Label
+
     @FXML
     private lateinit var img_player2: ImageView
 
