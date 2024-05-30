@@ -52,6 +52,8 @@ class MenuController {
     fun initialize() {
         GlobalScope.launch(Dispatchers.IO) {
             usuarios=obtenerClientesBD()
+            palabras1player=obtenerPalabrasBD()
+            palabras2player=obtenerPalabrasBD()
         }
     }
 
