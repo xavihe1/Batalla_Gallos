@@ -18,6 +18,9 @@ import javafx.util.Duration
 import java.awt.Image
 import java.net.URL
 import javafx.scene.image.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class GameController {
 
@@ -74,6 +77,10 @@ class GameController {
     fun initialize() {
         startButon.setOnAction {
             startCountdown()
+            GlobalScope.launch(Dispatchers.IO) {
+                val ply1=obtenerPalabrasBD()
+                val ply2=obtenerPalabrasBD()
+            }
         }
 
         exitButton.setOnAction {
