@@ -20,7 +20,6 @@ import java.net.URL
 
 class RegisterController {
 
-    var clientes= listOf<Cliente>()
     @FXML
     private lateinit var user: TextField
 
@@ -62,8 +61,8 @@ class RegisterController {
         val imgLink = imageLink.text
         val usuario="$username $pwd $imgLink 0"
         println(usuario)
-        clientes=obtenerClientesBD()
-        clientes.forEach {
+        usuarios=obtenerClientesBD()
+        usuarios.forEach {
             println(it.name)
             if(it.name==username){
                 sePuede=false
