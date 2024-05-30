@@ -34,11 +34,11 @@ class ConfigurationsController {
     @FXML
     fun initialize() {
         timeSlider.value = tiempo.toDouble()
-        tiempoSeleccionado.text = "Time: ${timeSlider.value.toInt()} seconds"
+        tiempoSeleccionado.text = "${timeSlider.value.toInt()} seconds"
 
         timeSlider.valueProperty().addListener { _, _, newValue ->
             tiempo = newValue.toInt()
-            tiempoSeleccionado.text = "Time: $tiempo seconds"
+            tiempoSeleccionado.text = "$tiempo seconds"
         }
     }
 
