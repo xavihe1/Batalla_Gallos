@@ -103,3 +103,11 @@ suspend fun obtenerPalabrasBD():List<String> {
     return palabras
 }
 
+@OptIn(InternalAPI::class)
+suspend fun aumentarPuntuacion(texto: String, puntuacion: Int) {
+    var client = HttpClient()
+    client.post("http://127.0.0.1:8080/clients/addPuntuacion") {
+        body = Pair(texto, puntuacion)
+    }
+}
+
