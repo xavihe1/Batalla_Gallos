@@ -1,8 +1,10 @@
 package com.example.batalla_gallos
 
+import com.example.batalla_gallos.model.Cliente
 import com.example.batalla_gallos.model.GamePlayers
 import javafx.animation.KeyFrame
 import javafx.animation.Timeline
+import javafx.collections.FXCollections
 import javafx.fxml.FXML
 import javafx.fxml.FXMLLoader
 import javafx.scene.Parent
@@ -15,6 +17,7 @@ import javafx.stage.Stage
 import javafx.util.Duration
 import java.awt.Image
 import java.net.URL
+import javafx.scene.image.*
 
 class GameController {
 
@@ -80,6 +83,9 @@ class GameController {
         configurationButton.setOnAction {
             navigateToSettings()
         }
+        val observableList = FXCollections.observableArrayList(usuarios.map { it.name })
+        cb_player1.items = observableList
+        cb_player2.items = observableList
 
         tiempo = ConfigurationsController.tiempo
     }
@@ -137,11 +143,28 @@ class GameController {
      */
 
 
-    /*
-    fun imagesOfThePlayers(){
-        val url:String = ""
-        val image = Image(url)
+    @FXML
+    fun imageOfThePlayer1(){
+        var player= Cliente( "", "", 0)
+        for (i in usuarios){
+            if (i.name == cb_player1.value){
+                player = i
+            }
+        }
+        val image = Image(player.urlPFP)
         img_player1.image = image
     }
-    */
+
+
+    @FXML
+    fun imageOfThePlayer2(){
+        var player= Cliente( "", "", 0)
+        for (i in usuarios){
+            if (i.name == cb_player2.value){
+                player = i
+            }
+        }
+        val image = Image(player.urlPFP)
+        img_player2.image = image
+    }
 }

@@ -12,6 +12,9 @@ import javafx.stage.Stage
 import java.net.URL
 import com.example.batalla_gallos.model.*
 import javafx.scene.control.Label
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class RankingController {
 
@@ -54,7 +57,6 @@ class RankingController {
     @FXML
     fun mostrarRanking() {
         //llamar funcion bajar usuarios
-
         usuarios = usuarios.sortedByDescending { it.puntuacion }
         if (usuarios.isNotEmpty()) {
             textoPrimero.text = usuarios[0].name

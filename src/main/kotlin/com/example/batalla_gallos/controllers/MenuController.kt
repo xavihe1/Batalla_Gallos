@@ -48,7 +48,12 @@ class MenuController {
         stage.scene = scene
         stage.show()
     }
-
+    @FXML
+    fun initialize() {
+        GlobalScope.launch(Dispatchers.IO) {
+            usuarios=obtenerClientesBD()
+        }
+    }
 
     @FXML
     fun irRegister() {

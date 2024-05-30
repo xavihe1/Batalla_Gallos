@@ -4,7 +4,9 @@ import com.example.batalla_gallos.model.Cliente
 import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.request.*
+import io.ktor.client.statement.*
 import io.ktor.util.*
+import kotlinx.serialization.json.Json
 import java.io.BufferedReader
 import java.io.File
 import java.io.FileReader
@@ -84,7 +86,9 @@ suspend fun obtenerClientesBD():List<Cliente>{
     var clientes= listOf<Cliente>()
     val client = HttpClient()
     val mensaje=client.get("http://127.0.0.1:8080/clients/all")
-    clientes=mensaje.body()
+    var x=mensaje.bodyAsText()
+    val json = Json { ignoreUnknownKeys = true }
+    clientes = json.decodeFromString<List<Cliente>>(x)
     return clientes
 }
 
