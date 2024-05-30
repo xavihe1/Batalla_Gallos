@@ -3,6 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.batalla_gallos.RankingController">
    <children>
@@ -11,27 +12,36 @@
             <Image url="@imgs/pep.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="69.0" fitWidth="77.0" layoutX="35.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="103.0" fitWidth="105.0" layoutX="36.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@imgs/1r.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="69.0" fitWidth="77.0" layoutX="35.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="111.0" fitWidth="103.0" layoutX="36.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@imgs/2n.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="69.0" fitWidth="77.0" layoutX="35.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="103.0" fitWidth="99.0" layoutX="38.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@imgs/3r.png" />
          </image>
       </ImageView>
       <Button fx:id="exitButton" layoutX="702.0" layoutY="355.0" mnemonicParsing="false" onAction="#navigateToMenu" text="Exit" />
-      <Label layoutX="198.0" layoutY="74.0" text="1r" textFill="WHITE" />
-      <Label layoutX="197.0" layoutY="146.0" text="2n" textFill="WHITE" />
-      <Label layoutX="199.0" layoutY="229.0" text="3r" textFill="WHITE" />
-      <ImageView fitHeight="69.0" fitWidth="69.0" layoutX="104.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="69.0" fitWidth="69.0" layoutX="104.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="69.0" fitWidth="69.0" layoutX="111.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="textoPrimero" layoutX="277.0" layoutY="86.0" prefHeight="52.0" prefWidth="312.0" text="-----" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="textoSegundo" layoutX="277.0" layoutY="203.0" prefHeight="27.0" prefWidth="312.0" text="-----" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="textoTercero" layoutX="278.0" layoutY="321.0" prefHeight="27.0" prefWidth="312.0" text="-----" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <ImageView fx:id="imagenPrimero" fitHeight="103.0" fitWidth="103.0" layoutX="148.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imagenSegundo" fitHeight="103.0" fitWidth="103.0" layoutX="148.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imagenTercero" fitHeight="103.0" fitWidth="103.0" layoutX="148.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

@@ -21,4 +21,5 @@ fun main() {
 }
 
 var usuarios= listOf<Cliente>()
-var usuariosLoged= listOf<String>("pepe","manolo")
+
+var usuariosLoged= listOf<String>()

@@ -15,10 +15,6 @@ import javafx.scene.control.Label
 
 class RankingController {
 
-    var usuarios = mutableListOf<Cliente>().sortBy { it.puntuacion }
-    @FXML
-    lateinit var imagenFondo: ImageView
-
     @FXML
     lateinit var textoPrimero: Label
 
@@ -40,6 +36,10 @@ class RankingController {
     @FXML
     lateinit var exitButton: Button
 
+    @FXML
+    fun initialize() {
+        mostrarRanking()
+    }
 
     @FXML
     fun navigateToMenu() {
@@ -49,5 +49,24 @@ class RankingController {
         val scene = Scene(root)
         stage.scene = scene
         stage.show()
+    }
+
+    @FXML
+    fun mostrarRanking() {
+        //llamar funcion bajar usuarios
+
+        usuarios = usuarios.sortedByDescending { it.puntuacion }
+        if (usuarios.isNotEmpty()) {
+            textoPrimero.text = usuarios[0].name
+            imagenPrimero.image = Image(usuarios[0].urlPFP)
+        }
+        if (usuarios.size >= 2) {
+            textoSegundo.text = usuarios[1].name
+            imagenSegundo.image = Image(usuarios[1].urlPFP)
+        }
+        if (usuarios.size >= 3) {
+            textoTercero.text = usuarios[2].name
+            imagenTercero.image = Image(usuarios[2].urlPFP)
+        }
     }
 }
