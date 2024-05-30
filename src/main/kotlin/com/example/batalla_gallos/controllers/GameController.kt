@@ -68,7 +68,7 @@ class GameController {
     private var tiempo: Int = 20
 
     @FXML
-    fun inicialize() {
+    fun initialize() {
         startButon.setOnAction {
             startCountdown()
         }

@@ -81,17 +81,10 @@ suspend fun subirClienteBD(texto:String){
 }
 
 suspend fun obtenerClientesBD():List<Cliente>{
+    var clientes= listOf<Cliente>()
     val client = HttpClient()
-    var clientesTexto:MutableList<String>
-    val clientes= mutableListOf<Cliente>()
-    val messageResponse = client.get("http://127.0.0.1:8080/clients/all")
-    clientesTexto = messageResponse.body<MutableList<String>>()
-    println(clientesTexto)
-    clientesTexto.forEach {
-        val split=it.split(" ")
-        val cliente=Cliente(split[0],split[1],split[2],split[3].toInt())
-        clientes.add(cliente)
-    }
+    val mensaje=client.get("http://127.0.0.1:8080/clients/all")
+    clientes=mensaje.body()
     return clientes
 }
 

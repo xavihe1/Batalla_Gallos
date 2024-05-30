@@ -41,10 +41,9 @@ class RegisterController {
     @FXML
     fun register() {
         val username = user.text
-        val pwd = password.text
         val img = imageLink.text
 
-        if(username.isEmpty() || pwd.isEmpty() || img.isEmpty()) {
+        if(username.isEmpty() || img.isEmpty()) {
             showAlert(AlertType.ERROR, "Campos Incompletos", "Por favor, rellene los campos.")
             return
         }
@@ -57,17 +56,9 @@ class RegisterController {
     private suspend fun subirCliente() {
         var sePuede=true
         val username = user.text
-        val pwd = password.text
         val imgLink = imageLink.text
-        val usuario="$username $pwd $imgLink 0"
+        val usuario="$username $imgLink 0"
         println(usuario)
-        usuarios=obtenerClientesBD()
-        usuarios.forEach {
-            println(it.name)
-            if(it.name==username){
-                sePuede=false
-            }
-        }
         if (sePuede){
             subirClienteBD(usuario)
         } else {
