@@ -1,5 +1,6 @@
 package com.example.batalla_gallos
 
+import com.almasb.fxgl.dsl.text
 import com.example.batalla_gallos.model.Cliente
 import javafx.fxml.FXML
 import javafx.fxml.FXMLLoader
@@ -40,6 +41,15 @@ class RegisterController {
     @OptIn(DelicateCoroutinesApi::class)
     @FXML
     fun register() {
+        val username = user.text
+        val pwd = password.text
+        val img = imageLink.text
+
+        if(username.isEmpty() || pwd.isEmpty() || img.isEmpty()) {
+            showAlert(AlertType.ERROR, "Campos Incompletos", "Por favor, rellene los campos.")
+            return
+        }
+
         GlobalScope.launch(Dispatchers.IO) {
             subirCliente()
         }
@@ -61,6 +71,10 @@ class RegisterController {
         }
         if (sePuede){
             subirClienteBD(usuario)
+        } else {
+            GlobalScope.launch(Dispatchers.Main) {
+                showAlert(AlertType.ERROR, "Registro Fallido", "El nombre de usuario ya está en uso.")
+            }
         }
     }
 
