@@ -3,6 +3,7 @@ package com.example.batalla_gallos
 import com.example.batalla_gallos.model.GamePlayers
 import javafx.animation.KeyFrame
 import javafx.animation.Timeline
+import javafx.collections.FXCollections
 import javafx.fxml.FXML
 import javafx.fxml.FXMLLoader
 import javafx.scene.Parent
@@ -60,7 +61,7 @@ class GameController {
     private var countdown: Timeline? = null
 
     @FXML
-    fun inicialize() {
+    fun initialize() {
         startButon.setOnAction {
             startCountdown()
         }
@@ -68,6 +69,11 @@ class GameController {
         exitButton.setOnAction {
             navigateToMenu()
         }
+
+        val observableList = FXCollections.observableArrayList(usuariosLoged)
+        cb_player1.items = observableList
+        cb_player2.items = observableList
+
     }
 
     @FXML
