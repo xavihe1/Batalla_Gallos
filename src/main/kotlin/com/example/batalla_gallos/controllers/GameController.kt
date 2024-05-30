@@ -3,7 +3,6 @@ package com.example.batalla_gallos
 import com.example.batalla_gallos.model.GamePlayers
 import javafx.animation.KeyFrame
 import javafx.animation.Timeline
-import javafx.collections.FXCollections
 import javafx.fxml.FXML
 import javafx.fxml.FXMLLoader
 import javafx.scene.Parent
@@ -52,6 +51,13 @@ class GameController {
     @FXML
     private lateinit var puntosJugador2: Label
 
+    @FXML
+    private lateinit var configurationImage: ImageView
+
+    @FXML
+    private lateinit var configurationButton: Button
+
+
     //variable para llamar a la base de datos aqui
 
 
@@ -59,9 +65,10 @@ class GameController {
     private var selectedPlayer1 = ""
     private var selectedPlayer2 = ""
     private var countdown: Timeline? = null
+    private var tiempo: Int = 20
 
     @FXML
-    fun initialize() {
+    fun inicialize() {
         startButon.setOnAction {
             startCountdown()
         }
@@ -70,15 +77,16 @@ class GameController {
             navigateToMenu()
         }
 
-        val observableList = FXCollections.observableArrayList(usuariosLoged)
-        cb_player1.items = observableList
-        cb_player2.items = observableList
+        configurationButton.setOnAction {
+            navigateToSettings()
+        }
 
+        tiempo = ConfigurationsController.tiempo
     }
 
     @FXML
     private fun startCountdown() {
-        var time = 20
+        var time = tiempo
 
         countdown?.stop()
 
@@ -91,7 +99,7 @@ class GameController {
                 }
             })
         )
-        countdown?.cycleCount = 20
+        countdown?.cycleCount = tiempo
         countdown?.play()
     }
 
@@ -100,6 +108,17 @@ class GameController {
         val stage = exitButton.scene.window as Stage
         val url: URL? = javaClass.getResource("menuView.fxml")
         val root: Parent = FXMLLoader.load(url)
+        val scene = Scene(root)
+        stage.scene = scene
+        stage.show()
+    }
+
+    @FXML
+    fun navigateToSettings() {
+        val stage = configurationButton.scene.window as Stage
+        val url: URL? = javaClass.getResource("configurations.fxml")
+        val loader = FXMLLoader(url)
+        val root: Parent = loader.load<Parent>()
         val scene = Scene(root)
         stage.scene = scene
         stage.show()
