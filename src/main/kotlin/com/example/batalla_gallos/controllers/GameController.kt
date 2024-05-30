@@ -18,7 +18,6 @@ import javafx.util.Duration
 import java.awt.Image
 import java.net.URL
 import javafx.scene.image.*
-import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -31,16 +30,12 @@ class GameController {
     //LABELS PLY1
     @FXML
     private lateinit var palabra11: Label
-
     @FXML
     private lateinit var palabra12: Label
-
     @FXML
     private lateinit var palabra13: Label
-
     @FXML
     private lateinit var palabra14: Label
-
     @FXML
     private lateinit var palabra15: Label
 
@@ -48,16 +43,12 @@ class GameController {
 
     @FXML
     private lateinit var palabra21: Label
-
     @FXML
     private lateinit var palabra22: Label
-
     @FXML
     private lateinit var palabra23: Label
-
     @FXML
     private lateinit var palabra24: Label
-
     @FXML
     private lateinit var palabra25: Label
 
@@ -78,6 +69,12 @@ class GameController {
 
     @FXML
     private lateinit var exitButton: Button
+
+    @FXML
+    private lateinit var palabrasJugador1: Label
+
+    @FXML
+    private lateinit var palabrasJuagdor2: Label
 
     @FXML
     private lateinit var puntosJugador1: Label
@@ -101,12 +98,14 @@ class GameController {
     private var countdown: Timeline? = null
     private var tiempo: Int = 20
 
-    @OptIn(DelicateCoroutinesApi::class)
     @FXML
     fun initialize() {
-
         startButon.setOnAction {
             startCountdown()
+            GlobalScope.launch(Dispatchers.IO) {
+                val ply1=obtenerPalabrasBD()
+                val ply2=obtenerPalabrasBD()
+            }
         }
 
         exitButton.setOnAction {
@@ -121,19 +120,6 @@ class GameController {
         cb_player2.items = observableList
 
         tiempo = ConfigurationsController.tiempo
-
-
-        palabra11.text = palabras1player[0]
-        palabra12.text = palabras1player[1]
-        palabra13.text = palabras1player[2]
-        palabra14.text = palabras1player[3]
-        palabra15.text = palabras1player[4]
-
-        palabra21.text = palabras2player[0]
-        palabra22.text = palabras2player[1]
-        palabra23.text = palabras2player[2]
-        palabra24.text = palabras2player[3]
-        palabra25.text = palabras2player[4]
     }
 
     @FXML
@@ -177,10 +163,10 @@ class GameController {
     }
 
     @FXML
-    fun imageOfThePlayer1() {
-        var player = Cliente("", "", 0)
-        for (i in usuarios) {
-            if (i.name == cb_player1.value) {
+    fun imageOfThePlayer1(){
+        var player= Cliente( "", "", 0)
+        for (i in usuarios){
+            if (i.name == cb_player1.value){
                 player = i
             }
         }
@@ -190,10 +176,10 @@ class GameController {
 
 
     @FXML
-    fun imageOfThePlayer2() {
-        var player = Cliente("", "", 0)
-        for (i in usuarios) {
-            if (i.name == cb_player2.value) {
+    fun imageOfThePlayer2(){
+        var player= Cliente( "", "", 0)
+        for (i in usuarios){
+            if (i.name == cb_player2.value){
                 player = i
             }
         }

@@ -54,7 +54,7 @@
             <Label fx:id="palabra22" layoutX="441.0" layoutY="289.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
             <Label fx:id="palabra23" layoutX="441.0" layoutY="313.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
             <Label fx:id="palabra24" layoutX="441.0" layoutY="337.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
-            <Label fx:id="palabra25" layoutX="441.0" layoutY="361.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
+            <Label layoutX="441.0" layoutY="361.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
          </children>
       </Pane>
    </children>
