@@ -41,6 +41,12 @@
                   <Font name="System Italic" size="12.0" />
                </font>
             </Label>
+            <ImageView fitHeight="39.0" fitWidth="58.0" layoutX="624.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imgs/configurationIcon.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="configurationButton" layoutX="622.0" layoutY="9.0" mnemonicParsing="false" opacity="0.0" prefHeight="30.0" prefWidth="62.0" onAction="#navigateToSettings" text="Configuration" />
          </children>
       </Pane>
    </children>

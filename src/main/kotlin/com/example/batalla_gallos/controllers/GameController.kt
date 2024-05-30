@@ -51,6 +51,13 @@ class GameController {
     @FXML
     private lateinit var puntosJugador2: Label
 
+    @FXML
+    private lateinit var configurationImage: ImageView
+
+    @FXML
+    private lateinit var configurationButton: Button
+
+
     //variable para llamar a la base de datos aqui
 
 
@@ -58,6 +65,7 @@ class GameController {
     private var selectedPlayer1 = ""
     private var selectedPlayer2 = ""
     private var countdown: Timeline? = null
+    private var tiempo: Int = 20
 
     @FXML
     fun inicialize() {
@@ -68,11 +76,21 @@ class GameController {
         exitButton.setOnAction {
             navigateToMenu()
         }
+
+        configurationButton.setOnAction {
+            navigateToSettings()
+        }
     }
 
     @FXML
     private fun startCountdown() {
-        var time = 20
+        val stage = configurationButton.scene.window as Stage
+        val loader = FXMLLoader(javaClass.getResource("configurations.fxml"))
+        val root: Parent = loader.load()
+        val configurationsController = loader.getController<ConfigurationsController>()
+        tiempo = configurationsController.getTiempo()
+
+        var time = tiempo
 
         countdown?.stop()
 
@@ -85,7 +103,7 @@ class GameController {
                 }
             })
         )
-        countdown?.cycleCount = 20
+        countdown?.cycleCount = tiempo
         countdown?.play()
     }
 
@@ -94,6 +112,17 @@ class GameController {
         val stage = exitButton.scene.window as Stage
         val url: URL? = javaClass.getResource("menuView.fxml")
         val root: Parent = FXMLLoader.load(url)
+        val scene = Scene(root)
+        stage.scene = scene
+        stage.show()
+    }
+
+    @FXML
+    fun navigateToSettings() {
+        val stage = configurationButton.scene.window as Stage
+        val url: URL? = javaClass.getResource("configurations.fxml")
+        val loader = FXMLLoader(url)
+        val root: Parent = loader.load<Parent>()
         val scene = Scene(root)
         stage.scene = scene
         stage.show()
