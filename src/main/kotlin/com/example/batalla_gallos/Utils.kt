@@ -92,5 +92,13 @@ suspend fun obtenerClientesBD():List<Cliente>{
     return clientes
 }
 
-
+suspend fun obtenerPalabrasBD():List<String> {
+    var palabras = listOf<String>()
+    val client = HttpClient()
+    val mensaje = client.get("http://127.0.0.1:8080/words")
+    var x=mensaje.bodyAsText()
+    val json = Json { ignoreUnknownKeys = true }
+    palabras = json.decodeFromString<List<String>>(x)
+    return palabras
+}
 

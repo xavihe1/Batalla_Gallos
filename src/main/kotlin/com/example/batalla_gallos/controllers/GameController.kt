@@ -130,19 +130,6 @@ class GameController {
         stage.show()
     }
 
-    /*
-    fun loadImage(username: String, imageView: ImageView) {
-        val playerData = database.getPlayerData(username)
-        if (playerData?.imageUrl != null) {
-            val image = Image(playerData.imageUrl)
-            Platform.runLater {
-                imageView.image = image
-            }
-        }
-    }
-     */
-
-
     @FXML
     fun imageOfThePlayer1(){
         var player= Cliente( "", "", 0)
