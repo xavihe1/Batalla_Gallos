@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #B3D7FF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.batalla_gallos.MenuController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #B3D7FF;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.batalla_gallos.MenuController">
    <children>
       <ImageView fitHeight="244.0" fitWidth="251.0" layoutX="58.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -13,14 +12,13 @@
          </image>
       </ImageView>
       <Button fx:id="irJuego" layoutX="418.0" layoutY="134.0" mnemonicParsing="false" onAction="#irJuego" text="Play" />
-      <Button fx:id="irlogin" layoutX="414.0" layoutY="171.0" mnemonicParsing="false" onAction="#irLogin" text="Login" />
       <ImageView fitHeight="44.0" fitWidth="64.0" layoutX="543.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@imgs/rank.png" />
          </image>
       </ImageView>
-      <Button fx:id="irRegister" layoutX="385.0" layoutY="205.0" mnemonicParsing="false" onAction="#irRegister" text="Register a Player" />
+      <Button fx:id="irRegister" layoutX="385.0" layoutY="189.0" mnemonicParsing="false" onAction="#irRegister" text="Register a Player" />
       <Button fx:id="subirPalabras" layoutX="392.0" layoutY="241.0" mnemonicParsing="false" onAction="#subirPalabras" text="Upload words" />
-      <Button fx:id="rankingButton" layoutX="534.0" layoutY="32.0" mnemonicParsing="false" opacity="0.0" prefHeight="44.0" prefWidth="62.0" onAction="#irRanking" text="Ranking" />
+      <Button fx:id="rankingButton" layoutX="534.0" layoutY="32.0" mnemonicParsing="false" onAction="#irRanking" opacity="0.0" prefHeight="44.0" prefWidth="62.0" text="Ranking" />
    </children>
 </Pane>
