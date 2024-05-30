@@ -18,7 +18,6 @@ import javafx.util.Duration
 import java.awt.Image
 import java.net.URL
 import javafx.scene.image.*
-import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -31,16 +30,12 @@ class GameController {
     //LABELS PLY1
     @FXML
     private lateinit var palabra11: Label
-
     @FXML
     private lateinit var palabra12: Label
-
     @FXML
     private lateinit var palabra13: Label
-
     @FXML
     private lateinit var palabra14: Label
-
     @FXML
     private lateinit var palabra15: Label
 
@@ -48,16 +43,12 @@ class GameController {
 
     @FXML
     private lateinit var palabra21: Label
-
     @FXML
     private lateinit var palabra22: Label
-
     @FXML
     private lateinit var palabra23: Label
-
     @FXML
     private lateinit var palabra24: Label
-
     @FXML
     private lateinit var palabra25: Label
 
@@ -80,10 +71,16 @@ class GameController {
     private lateinit var exitButton: Button
 
     @FXML
-    private lateinit var puntosJugador1: Label
+    private lateinit var puntuacio1player: Label
 
     @FXML
-    private lateinit var puntosJugador2: Label
+    private lateinit var puntuacio1playerButton: Button
+
+    @FXML
+    private lateinit var puntuacio2player: Label
+
+    @FXML
+    private lateinit var puntuacio2playerButton: Button
 
     @FXML
     private lateinit var configurationImage: ImageView
@@ -96,17 +93,11 @@ class GameController {
 
     //variable para llamar a la base de datos aqui
 
-
-    private val players = ArrayList<GamePlayers>()
-    private var selectedPlayer1 = ""
-    private var selectedPlayer2 = ""
     private var countdown: Timeline? = null
     private var tiempo: Int = 20
 
-    @OptIn(DelicateCoroutinesApi::class)
     @FXML
     fun initialize() {
-
         startButon.setOnAction {
             startCountdown()
         }
@@ -123,7 +114,6 @@ class GameController {
         cb_player2.items = observableList
 
         tiempo = ConfigurationsController.tiempo
-
 
         palabra11.text = palabras1player[0]
         palabra12.text = palabras1player[1]
@@ -185,10 +175,10 @@ class GameController {
     }
 
     @FXML
-    fun imageOfThePlayer1() {
-        var player = Cliente("", "", 0)
-        for (i in usuarios) {
-            if (i.name == cb_player1.value) {
+    fun imageOfThePlayer1(){
+        var player= Cliente( "", "", 0)
+        for (i in usuarios){
+            if (i.name == cb_player1.value){
                 player = i
             }
         }
@@ -198,10 +188,10 @@ class GameController {
 
 
     @FXML
-    fun imageOfThePlayer2() {
-        var player = Cliente("", "", 0)
-        for (i in usuarios) {
-            if (i.name == cb_player2.value) {
+    fun imageOfThePlayer2(){
+        var player= Cliente( "", "", 0)
+        for (i in usuarios){
+            if (i.name == cb_player2.value){
                 player = i
             }
         }

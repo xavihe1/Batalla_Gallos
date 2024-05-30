@@ -21,18 +21,18 @@
                   <Font name="Vemana2000" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="21.0" layoutY="266.0" prefHeight="119.0" prefWidth="215.0" style="-fx-background-color: white; -fx-background-radius: 6%;" />
+            <Label layoutX="17.0" layoutY="265.0" prefHeight="123.0" prefWidth="202.0" style="-fx-background-color: white; -fx-background-radius: 6%;" />
             <Button fx:id="exitButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#navigateToMenu" text="Exit" />
             <Button fx:id="startButon" layoutX="306.0" layoutY="325.0" mnemonicParsing="false" onAction="#startCountdown" prefHeight="39.0" prefWidth="77.0" style="-fx-background-color: black;" text="Start" textFill="WHITE">
                <font>
                   <Font name="System Bold Italic" size="15.0" />
                </font></Button>
-            <Label layoutX="438.0" layoutY="266.0" prefHeight="119.0" prefWidth="215.0" style="-fx-background-color: white; -fx-background-radius: 6%;" />
-            <Label layoutX="482.0" layoutY="88.0" prefHeight="16.0" prefWidth="77.0" style="-fx-background-color: white; -fx-background-radius: 50%;" text="   Points: ">
+            <Label layoutX="438.0" layoutY="264.0" prefHeight="123.0" prefWidth="209.0" style="-fx-background-color: white; -fx-background-radius: 6%;" />
+            <Label fx:id="puntuacio2player" layoutX="482.0" layoutY="88.0" prefHeight="16.0" prefWidth="77.0" style="-fx-background-color: white; -fx-background-radius: 50%;" text=" Points: 0000">
                <font>
                   <Font name="System Italic" size="12.0" />
                </font></Label>
-            <Label layoutX="45.0" layoutY="88.0" prefHeight="16.0" prefWidth="77.0" style="-fx-background-color: white; -fx-background-radius: 50%;" text="   Points: ">
+            <Label fx:id="puntuacio1player" layoutX="45.0" layoutY="88.0" prefHeight="16.0" prefWidth="77.0" style="-fx-background-color: white; -fx-background-radius: 50%;" text=" Points: 0000">
                <font>
                   <Font name="System Italic" size="12.0" />
                </font>
@@ -42,19 +42,19 @@
                   <Image url="@imgs/configurationIcon.png" />
                </image>
             </ImageView>
-            <Button fx:id="configurationButton" layoutX="622.0" layoutY="9.0" mnemonicParsing="false" onAction="#navigateToSettings" opacity="0.0" prefHeight="30.0" prefWidth="62.0" text="Configuration" />
-            <ImageView fx:id="img_player1" fitHeight="130.0" fitWidth="140.0" layoutX="59.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="img_player2" fitHeight="130.0" fitWidth="140.0" layoutX="487.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true" />
-            <Label fx:id="palabra12" layoutX="24.0" layoutY="289.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
-            <Label fx:id="palabra13" layoutX="24.0" layoutY="313.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
-            <Label fx:id="palabra14" layoutX="24.0" layoutY="337.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
-            <Label fx:id="palabra15" layoutX="25.0" layoutY="361.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
-            <Label fx:id="palabra11" layoutX="24.0" layoutY="266.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
-            <Label fx:id="palabra21" layoutX="441.0" layoutY="266.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
-            <Label fx:id="palabra22" layoutX="441.0" layoutY="289.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
-            <Label fx:id="palabra23" layoutX="441.0" layoutY="313.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
-            <Label fx:id="palabra24" layoutX="441.0" layoutY="337.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
-            <Label fx:id="palabra25" layoutX="441.0" layoutY="361.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
+             <Button fx:id="configurationButton" layoutX="622.0" layoutY="9.0" mnemonicParsing="false" onAction="#navigateToSettings" opacity="0.0" prefHeight="30.0" prefWidth="62.0" text="Configuration" />
+             <ImageView fx:id="img_player1" fitHeight="130.0" fitWidth="140.0" layoutX="59.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true" />
+             <ImageView fx:id="img_player2" fitHeight="130.0" fitWidth="140.0" layoutX="487.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true" />
+             <Label fx:id="palabra12" layoutX="24.0" layoutY="289.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
+             <Label fx:id="palabra13" layoutX="24.0" layoutY="313.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
+             <Label fx:id="palabra14" layoutX="24.0" layoutY="337.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
+             <Label fx:id="palabra15" layoutX="25.0" layoutY="361.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
+             <Label fx:id="palabra11" layoutX="24.0" layoutY="266.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
+             <Label fx:id="palabra21" layoutX="441.0" layoutY="266.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
+             <Label fx:id="palabra22" layoutX="441.0" layoutY="289.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
+             <Label fx:id="palabra23" layoutX="441.0" layoutY="313.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
+             <Label fx:id="palabra24" layoutX="441.0" layoutY="337.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
+             <Label fx:id="palabra25" layoutX="441.0" layoutY="361.0" prefHeight="24.0" prefWidth="209.0" text="Label" />
          </children>
       </Pane>
    </children>
