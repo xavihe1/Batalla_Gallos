@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #B3D7FF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.batalla_gallos.ConfigurationsController">
    <children>
-      <Slider fx:id="timeSlider" layoutX="132.0" layoutY="181.0" />
+      <Slider fx:id="timeSlider" layoutX="132.0" layoutY="181.0" min="10" max="60" />
       <Label layoutX="39.0" layoutY="33.0" prefHeight="33.0" prefWidth="343.0" text="Time Settings">
          <font>
             <Font name="System Italic" size="30.0" />
