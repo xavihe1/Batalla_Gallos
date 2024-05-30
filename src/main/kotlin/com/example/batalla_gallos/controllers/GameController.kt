@@ -91,6 +91,8 @@ class GameController {
     @FXML
     private lateinit var configurationButton: Button
 
+    private var jugador1Finish = false
+
 
     //variable para llamar a la base de datos aqui
 
@@ -147,7 +149,13 @@ class GameController {
                 time--
                 counter.text = time.toString()
                 if (time <= 0) {
-                    countdown?.stop()
+                    //si ha acabado el jugaro 1 empieza el dos
+                    if (!jugador1Finish) {
+                        time = tiempo
+                        jugador1Finish = true
+                    } else { // si ya acabo el segundo, stop
+                        countdown?.stop()
+                    }
                 }
             })
         )
