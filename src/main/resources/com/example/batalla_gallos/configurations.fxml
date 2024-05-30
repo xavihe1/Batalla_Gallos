@@ -6,12 +6,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.batalla_gallos.ConfigurationsController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #B3D7FF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.batalla_gallos.ConfigurationsController">
    <children>
-      <Slider fx:id="timeSlider" layoutX="132.0" layoutY="181.0" min="10" max="40" value="20" />
+      <Slider fx:id="timeSlider" layoutX="132.0" layoutY="181.0" />
       <Label layoutX="39.0" layoutY="33.0" prefHeight="33.0" prefWidth="343.0" text="Time Settings">
          <font>
-            <Font size="24.0" />
+            <Font name="System Italic" size="30.0" />
          </font>
       </Label>
       <Label layoutX="39.0" layoutY="163.0" prefHeight="26.0" prefWidth="103.0" text="Time:">
@@ -19,9 +19,12 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="114.0" layoutY="217.0" prefHeight="26.0" prefWidth="59.0" text="min." />
-      <Label layoutX="254.0" layoutY="222.0" text="max." />
+      <Label layoutX="113.0" layoutY="209.0" prefHeight="26.0" prefWidth="59.0" text="min." />
+      <Label layoutX="256.0" layoutY="214.0" text="max." />
       <Label fx:id="tiempoSeleccionado" layoutX="287.0" layoutY="181.0" text="20 " />
-      <Button fx:id="backButton" layoutX="466.0" layoutY="353.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="120.0" onAction="#irJuego" text="Back To Game" />
+      <Button fx:id="backButton" layoutX="446.0" layoutY="353.0" mnemonicParsing="false" onAction="#irJuego" prefHeight="33.0" prefWidth="140.0" style="-fx-background-color: #60ABFF; -fx-border-radius: 10; -fx-background-radius: 10;" text="Back To Game">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
    </children>
 </AnchorPane>
