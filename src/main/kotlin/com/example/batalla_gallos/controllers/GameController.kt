@@ -80,16 +80,12 @@ class GameController {
         configurationButton.setOnAction {
             navigateToSettings()
         }
+
+        tiempo = ConfigurationsController.tiempo
     }
 
     @FXML
     private fun startCountdown() {
-        val stage = configurationButton.scene.window as Stage
-        val loader = FXMLLoader(javaClass.getResource("configurations.fxml"))
-        val root: Parent = loader.load()
-        val configurationsController = loader.getController<ConfigurationsController>()
-        tiempo = configurationsController.getTiempo()
-
         var time = tiempo
 
         countdown?.stop()
